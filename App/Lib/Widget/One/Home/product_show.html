@@ -1,0 +1,20 @@
+<?php 
+	$goodsImgs = selectGoodsPhoto();	//产品图片
+    $num = count($goodsImgs);
+?>
+      <div class="pro_l">
+        <p align="center" style="font-size:20px; font-weight:bold; color:#FF9900; line-height:40px;">{$obj.title} </p>
+        <p>
+        <div class="pro_imgss">
+          <!--DEMO start-->
+          <p style="width:760px; height:500px; margin:0 auto;">
+          <volist name="goodsImgs" id="vo">
+          <a href="__PUBLIC__/images/product/m_{$vo.image}" class="lightbox" rel="group1" title="{$obj.title}" <neq name="i" value="1">style="visibility:hidden;"</neq>>
+          <img src="__ROOT__/outPutImg.php?url=http://<?php echo $_SERVER['HTTP_HOST']; ?>/__PUBLIC__/images/product/m_{$vo.image}&pw=760&ph=476" width="760" height="476" alt=""/></a> 
+          </volist>
+          </p>
+          <!--DEMO end-->
+        </div>
+        </p>
+         {$obj.content|htmlspecialchars_decode}
+      </div>

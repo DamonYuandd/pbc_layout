@@ -1,0 +1,5 @@
+ <p align="center"><span style="font-size:20px; color:#333333; font-weight:bold;">{$obj.title}</span></p>
+      <p align="center"><img src="__HOME__/images/line.png" width="1040" height="1" /></p>
+      <p align="center">发布日期：{$obj.create_time|date="Y-m-d",###} 点击率：{$obj.click_count}次</p>
+      <p align="center">&nbsp;</p>
+     {$obj.content|htmlspecialchars_decode}　

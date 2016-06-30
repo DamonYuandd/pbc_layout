@@ -1,0 +1,14 @@
+<notempty  name="dataList[0]['image']">
+<div class="news_img"><img src="__PUBLIC__/images/news/s_{$dataList[0]['image']}" width="332" height="440" /></div>
+</notempty>
+      <div class="news_lists">
+        <ul>
+        <volist name="dataList" id="vo" empty="没有相关信息">
+          <li><span>{$vo.create_time|date="Y.m.d",###}</span><a href="__APP__/<?php echo MODULE_NAME; ?>/show/cid/{$vo.category_id}/id/{$vo.id}.html" target="_blank">{$vo.title}</a></li>
+        </volist>
+        </ul>
+      </div>
+      <div style="clear:both;"></div>
+      <div class="news_next">
+        {$pageBar}
+      </div>

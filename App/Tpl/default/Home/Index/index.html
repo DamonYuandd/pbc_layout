@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<layout name="Home:Inc:script" cache="0" />
+<script type="text/javascript" src="__HOME__/full/js/jquery.pack.js"></script>
+<script type="text/javascript" src="__HOME__/full/js/slides.js"></script>
+<script type="text/javascript" src="__HOME__/full/js/slide.js"></script>
+<link href="__HOME__/full/css/lrtk.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<layout name="Home:Inc:kefu" cache="0" />
+<div style="background:url(__HOME__/images/header_bg.jpg);">
+  <div id="header">
+    <div align="center">
+      <script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','433','height','204','src','swf/flash','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','wmode','transparent','movie','__HOME__/swf/flash' ); //end AC code
+    </script>
+      <noscript>
+      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="433" height="204">
+        <param name="movie" value="__HOME__/swf/flash.swf" />
+        <param name="quality" value="high" />
+        <param name="wmode" value="transparent" />
+        <embed src="__HOME__/swf/flash.swf" width="433" height="204" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" wmode="transparent"></embed>
+      </object>
+      </noscript>
+    </div>
+  </div>
+</div>
+<div>
+<div id="maincontent">
+        {:Y('List',array('style'=>'index_ads','rowpage'=>5,'model'=>'Advert','tplNum' => 'Home','userNum' => $USER_CNUM,'alias'=>'index/adList'))}
+    <div class="element navi left"><img src="__HOME__/full/image/left.gif" alt="left"></div>
+    <div class="element navi right"><img src="__HOME__/full/image/right.gif" alt="right"></div>
+</div>
+ <div id="banner"  style="display:none;" >
+    <!-- 代码 开始 -->
+    <div id="yc-mod-slider">
+      <div class="wrapper1">
+        <div id="slideshow" class="box_skitter fn-clear">
+          <ul>
+            {:Y('List',array('style'=>'index_ads','rowpage'=>5,'model'=>'Advert','tplNum' => 'Home','userNum' => $USER_CNUM,'alias'=>'index/adList'))}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 代码 结束 -->
+  </div>
+</div>
+<div style="background:url(__HOME__/images/navfirst_bg.jpg);">
+  <div id="navfirst">
+    <ul>
+      <li><a href="__APP__" class="cur">蒲记首页</a></li>
+       <volist name="part" id="vo">
+       	 <li><a href="{$vo.url}" title="{$vo.title}" >{$vo.title}</a></li>
+       </volist>
+    </ul>
+  </div>
+</div>
+<layout name="Home:Inc:footer" cache="0" />
+</body>
+</html>
