@@ -1,7 +1,4 @@
-<notempty  name="obj['image']">
-<neq name="_GET['cid']" value="1242">
-
-<p><img src="__PUBLIC__/images/news/m_{$obj['image']}" width="332" height="440" align="left" style=" margin-right:20px;" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-</neq>
-</notempty>
-{$obj.content|htmlspecialchars_decode|default="没有相关信息"}　     
+ <div class="page_right_show_add">您当前的位置：首页 &gt; <a href="{:U($location[1]['alias'].'/index')}">{$location[1]['title']}</a> &gt; {$location[2]['title']}</div>
+          <div class="page_right_show_details">
+           {$obj.content|htmlspecialchars_decode|default="没有相关信息"}
+          </div>

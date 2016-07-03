@@ -2,19 +2,30 @@
 	$goodsImgs = selectGoodsPhoto();	//产品图片
     $num = count($goodsImgs);
 ?>
-      <div class="pro_l">
-        <p align="center" style="font-size:20px; font-weight:bold; color:#FF9900; line-height:40px;">{$obj.title} </p>
-        <p>
-        <div class="pro_imgss">
-          <!--DEMO start-->
-          <p style="width:760px; height:500px; margin:0 auto;">
-          <volist name="goodsImgs" id="vo">
-          <a href="__PUBLIC__/images/product/m_{$vo.image}" class="lightbox" rel="group1" title="{$obj.title}" <neq name="i" value="1">style="visibility:hidden;"</neq>>
-          <img src="__ROOT__/outPutImg.php?url=http://<?php echo $_SERVER['HTTP_HOST']; ?>/__PUBLIC__/images/product/m_{$vo.image}&pw=760&ph=476" width="760" height="476" alt=""/></a> 
-          </volist>
-          </p>
-          <!--DEMO end-->
+     
+        <div class="page_right_show">
+         
+          <div class="page_right_show_add">您当前的位置：首页 &gt; <a href="{:U($location[1]['alias'].'/index')}">{$location[1]['title']}</a> &gt; {$location[2]['title']}</div>
+          <div class="page_right_show_details">
+            <div class="case_title">
+              <p>{$obj.title}</p>
+              <p><span>发布时间：{$obj.create_time|date="Y-m-d",###} </span></p>
+            </div>
+            <notempty name="goodsImgs">
+            <div class="page_right_concent">
+	              <div align="center">
+	              	<volist name="goodsImgs" id="vo">
+	              		<img src="{:echoImg($vo['image'],600,600)}" />
+	              	</volist>
+	              </div>
+            </div>
+            </notempty>
+            <div class="title_bg">产品介绍</div>
+            <div class="page_right_pro">
+              {$obj.content|htmlspecialchars_decode}
+            </div>
+            <div class="news_next">
+              <div align="center"><a href="{:U($location[1]['alias'].'/index')}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返回上一级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+            </div>
+          </div>
         </div>
-        </p>
-         {$obj.content|htmlspecialchars_decode}
-      </div>

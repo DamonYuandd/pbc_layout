@@ -458,3 +458,14 @@ function CBCencode($data,$privateKey,$iv){
 	return $encrypted;
 	//echo(base64_encode($encrypted));
 }
+
+function echoImg($img,$w,$h,$path="product"){
+	if (empty($img)){
+		echo __HOME__."/images/not.jpg";
+		return false;
+	}else{
+		$str = __ROOT__.'/outPutImg.php?url=http://'.$_SERVER['HTTP_HOST'].'/'.__PUBLIC__.'/images/'.$path.'/m_'.$img.'&pw='.$w.'&ph='.$h;
+		echo $str;
+	}
+	
+}

@@ -111,11 +111,12 @@ class ListWidget extends Widget {
 			//当前位置下标
 			//$location = $categoryDao->where( array('id'=>array('in',str_replace('|', ',', $category['levels']).','.$category['id']),'lang'=>$lang,'is_fixed'=>0,'hardware' => 'pc') )->order('id asc')->field('id,title,alias')->select();
 			$location = $categoryDao->where( array('id'=>array('in',str_replace('|', ',', $category['levels']).','.$category['id'])) )->order('id asc')->select();
-		$checkJson = json_parser($location[1]['title']);
-		if($checkJson){	//如果是JSON格式则处理
-			$title = json_decode($location[1]['title'],true);
-			$location[1]['title'] = $title[$lang]['title'];
-		}
+			 
+			$checkJson = json_parser($location[1]['title']);
+			if($checkJson){	//如果是JSON格式则处理
+				$title = json_decode($location[1]['title'],true);
+				$location[1]['title'] = $title[$lang]['title'];
+			}
 			if(count($location) <= 2){
 				$location[2] = $location[1];
 			}else if(count($location) > 3){

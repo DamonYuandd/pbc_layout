@@ -1,14 +1,18 @@
-<notempty  name="dataList[0]['image']">
-<div class="news_img"><img src="__PUBLIC__/images/news/s_{$dataList[0]['image']}" width="332" height="440" /></div>
-</notempty>
-      <div class="news_lists">
-        <ul>
-        <volist name="dataList" id="vo" empty="没有相关信息">
-          <li><span>{$vo.create_time|date="Y.m.d",###}</span><a href="__APP__/<?php echo MODULE_NAME; ?>/show/cid/{$vo.category_id}/id/{$vo.id}.html" target="_blank">{$vo.title}</a></li>
-        </volist>
-        </ul>
-      </div>
-      <div style="clear:both;"></div>
-      <div class="news_next">
-        {$pageBar}
-      </div>
+   
+    <div class="page_right_show">
+          <div class="page_right_show_add">您当前的位置：首页 &gt; <a href="{:U('News/index')}">{$location[1]['title']}</a> &gt; {$location[2]['title']}</div>
+          <div class="page_right_show_details">
+           <volist name="dataList" id="vo" empty="没有相关信息">
+	            <div class="right_news">
+	              <div class="right_news1"><a href="{:U(MODULE_NAME.'/show',array('cid'=>$vo['category_id'],'id'=>$vo['id']))}"><img src="{:echoImg($vo['image'],'233','128','news')}" /></a></div>
+	              <div class="right_news2">
+	                <div class="right_news21"><span style="float:left;"><a href="{:U(MODULE_NAME.'/show',array('cid'=>$vo['category_id'],'id'=>$vo['id']))}">{$vo.title}</a></span><span style="float:right;">发布时间：{$vo.create_time|date="Y-m-d",###}</span></div>
+	                <div class="right_news22">{$vo.summary} </div>
+	              </div>
+	            </div>
+	         </volist>
+            <div class="news_next">
+             <div style="text-align: right;">{$pageBar}</div>
+            </div>
+          </div>
+        </div>
