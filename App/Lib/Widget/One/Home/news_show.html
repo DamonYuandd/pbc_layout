@@ -1,5 +1,15 @@
- <p align="center"><span style="font-size:20px; color:#333333; font-weight:bold;">{$obj.title}</span></p>
-      <p align="center"><img src="__HOME__/images/line.png" width="1040" height="1" /></p>
-      <p align="center">发布日期：{$obj.create_time|date="Y-m-d",###} 点击率：{$obj.click_count}次</p>
-      <p align="center">&nbsp;</p>
-     {$obj.content|htmlspecialchars_decode}　
+        <div class="page_right_show">
+          <div class="page_right_show_add">您当前的位置：首页 &gt; <a href="{:U($location[1]['alias'].'/index')}">{$location[1]['title']}</a> &gt; {$location[2]['title']}</div>
+          <div class="page_right_show_details">
+            <div class="case_title">
+              <p>{$obj.title}</p>
+              <p><span>发布时间：{$obj.create_time|date="Y-m-d",###} </span></p>
+            </div>
+            <div class="page_right_concent">
+              {$obj.content|htmlspecialchars_decode}
+              <div class="news_next">
+                <div align="center"><a href="{:U('News/index')}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返回上一级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+              </div>
+            </div>
+          </div>
+        </div>

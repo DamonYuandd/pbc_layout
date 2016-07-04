@@ -36,11 +36,14 @@ class IndexAction extends HomeAction
 		
 	}
 
-	public function index() {	
+	public function index() {
+		$ads = M('advert')->where(array('category_id' => 1542,'is_publish' => 1))->order('ordernum desc,id desc')->select();
+		$indexNews = M('News')->where(array('category_id' => array('in','1540,1541'),'is_publish' => 1,'is_home' => 1))->order('ordernum desc,id desc')->limit(3)->select();
+ 
 		$this->indexGoods();
-		$this->assign('indexNews',getNewsByAlias('About/indexInfo'));
-		$this->assign('goodsCate',GoodsCate()); //产品分类
-		$this->assign('indexNewsList',$this->indexNewsList('News'));
+		$this->assign('ads',$ads);
+		$this->assign('indexNews',$indexNews);
+		 
 		$this->display($this->web_theme.':Index:index');
 	}
 	//首页新闻列表

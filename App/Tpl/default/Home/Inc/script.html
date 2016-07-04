@@ -1,7 +1,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>昆山金联鑫精密五金制品厂</title>
-<meta name="keywords" content="昆山金联鑫精密五金制品厂,昆山金联鑫,金联鑫五金制品厂,昆山五金制品厂,金联鑫">
-<meta name="description" content="昆山金联鑫精密五金制品厂,昆山金联鑫,金联鑫五金制品厂,昆山五金制品厂,金联鑫">
+{~echoSEO($system, $_GET['id'], $headTitle)}
 <link href="__HOME__/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="__HOME__/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="__HOME__/js/lrtk.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#searchButton").click(function(){
+			var a = $("#searchValue").val();
+			window.location.href="__APP__/Goods?search_key="+a;
+		})
+	})
+</script>

@@ -109,11 +109,11 @@ $(function(){
                  <option value="5">对联</option-->
                </select>
            </li>
-           <li id="li_code">
+           <li id="li_code" style="display:none;">
                <label>生成代码</label>
                <textarea id="code" name="code" cols="100" rows="3">{$obj.code}</textarea>
            </li>
-           <li id="li_net_img">
+           <li id="li_net_img" style="display:none;">
                <label>网络图片</label>
                <input type="text" id="net_image" name="net_image" value="{$obj.net_image}" class="type-text" style="width: 400px;"> 
 			   <span style="color:#999;">网络图片和本地图片最少填写一项</span>
@@ -148,7 +148,7 @@ $(function(){
                <label>图片超链接</label>
                <input type="text" id="url" name="url" value="{$obj.url}" class="type-text">
            </li
-		   ><li id="li_target">
+		   ><li id="li_target" style="display:none;">
                <label>打开方式</label>
                <select id="target" name="target" style="width:200px;">
 			     <option value="_top">本窗口</option>
@@ -164,11 +164,11 @@ $(function(){
                <input type="text" id="end_time" name="end_time" onClick="WdatePicker()" value="<?php echo (!isset($obj['end_time'])) ? date('Y-m-d') : date('Y-m-d', $obj['end_time']);?>" class="type-text" style="width:282px;">
            </li-->
 
-            <li id="li_synch_mobile">
+            <li id="li_synch_mobile"  style="display:none;">
                 <label>语言同步</label>
                 <input type="checkbox" name="synch_mobile" id="synch_mobile" value="1"> <small class="fc-999"> --如果手机版对应栏目也有这个广告，您还可以同步过去</small>
             </li>
-			<li id="li_mobile_category">
+			<li id="li_mobile_category" style="display:none;">
                 <label>语言分类</label>
                 <select id="one_mobile_category_id" name="one_mobile_category_id" style="width:200px;" onchange="changeCategory(this,'two_mobile_category_id','mobile')">
                 	<option value="-1" selected="">请选择语言分类</option>

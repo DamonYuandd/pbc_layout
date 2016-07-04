@@ -20,9 +20,9 @@
 <!--广告-->
 <div class="flexslider">
   <ul class="slides">
-    <li href-data="index.html" onclick="javascript:window.location.href=this.getAttribute('href-data')" style="background:url(__HOME__/images/img01.jpg) 50% 0 no-repeat; cursor:pointer;"></li>
-    <li href-data="index.html" onclick="javascript:window.location.href=this.getAttribute('href-data')" style="background:url(__HOME__/images/img02.jpg) 50% 0 no-repeat; cursor:pointer;"></li>
-    <li href-data="index.html" onclick="javascript:window.location.href=this.getAttribute('href-data')" style="background:url(__HOME__/images/img03.jpg) 50% 0 no-repeat; cursor:pointer;"></li>
+  	<volist name="ads" id="vo">
+    	<li href-data="{$vo.url}" onclick="javascript:window.location.href=this.getAttribute('href-data')" style="background:url(__PUBLIC__/images/advert/m_{$vo.image}) 50% 0 no-repeat; cursor:pointer;"></li>
+    </volist>
   </ul>
 </div>
 <script type="text/javascript" src="__HOME__/js/jquery.flexslider-min.js"></script>
@@ -39,7 +39,7 @@ $(document).ready(function(){
 <div style="background:url(__HOME__/images/about_bg.jpg);">
   <div id="about">
     <div class="about_box1">
-      <div class="about_box1_img"><a href="about.html"><img src="__HOME__/images/img1.jpg" alt="公司简介" /></a></div>
+      <div class="about_box1_img"><a href="{:U('About/index')}"><img src="__HOME__/images/img1.jpg" alt="公司简介" /></a></div>
       <div class="about_box1_txt">
         <p><span>公司简介</span></p>
         <p><img src="__HOME__/images/line.png" /></p>
@@ -50,7 +50,7 @@ $(document).ready(function(){
       </div>
     </div>
     <div class="about_box1">
-      <div class="about_box1_img"><a href="equipment.html"><img src="__HOME__/images/img2.jpg" alt="生产设备" /></a></div>
+      <div class="about_box1_img"><a href="{:U('Equipment/index')}"><img src="__HOME__/images/img2.jpg" alt="生产设备" /></a></div>
       <div class="about_box1_txt">
         <p><span>生产设备</span></p>
         <p><img src="__HOME__/images/line.png" /></p>
@@ -62,7 +62,7 @@ $(document).ready(function(){
       </div>
     </div>
     <div class="about_box2">
-      <div class="about_box1_img"><a href="services.html"><img src="__HOME__/images/img3.jpg" alt="技术服务" /></a></div>
+      <div class="about_box1_img"><a href="{:U('Services/index')}"><img src="__HOME__/images/img3.jpg" alt="技术服务" /></a></div>
       <div class="about_box1_txt">
         <p><span>技术服务</span></p>
         <p><img src="__HOME__/images/line.png" /></p>
@@ -85,56 +85,56 @@ $(document).ready(function(){
     </div>
     <div class="products_list">
       <div class="products_list_box">
-        <div class="products_list_img slide-right"><a href="products_details.html"><img src="__HOME__/images/p1.jpg" /></a></div>
+        <div class="products_list_img slide-right"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p1.jpg" /></a></div>
         <div class="products_list_title">
           <p>推车系列</p>
           <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
         </div>
       </div>
       <div class="products_list_box">
-        <div class="products_list_img slide-right"><a href="products_details.html"><img src="__HOME__/images/p2.jpg" /></a></div>
+        <div class="products_list_img slide-right"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p2.jpg" /></a></div>
         <div class="products_list_title">
           <p>推车系列</p>
           <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
         </div>
       </div>
       <div class="products_list_box">
-        <div class="products_list_img slide-right"><a href="products_details.html"><img src="__HOME__/images/p3.jpg" /></a></div>
+        <div class="products_list_img slide-right"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p3.jpg" /></a></div>
         <div class="products_list_title">
           <p>板式换热器</p>
           <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
         </div>
       </div>
       <div class="products_list_box">
-        <div class="products_list_img slide-right"><a href="products_details.html"><img src="__HOME__/images/p4.jpg" /></a></div>
+        <div class="products_list_img slide-right"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p4.jpg" /></a></div>
         <div class="products_list_title">
           <p>PP上滚轮</p>
           <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
         </div>
       </div>
       <div class="products_list_box">
-        <div class="products_list_img slide-left"><a href="products_details.html"><img src="__HOME__/images/p5.jpg" /></a></div>
+        <div class="products_list_img slide-left"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p5.jpg" /></a></div>
         <div class="products_list_title">
           <p>探温针</p>
           <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
         </div>
       </div>
       <div class="products_list_box">
-        <div class="products_list_img slide-left"><a href="products_details.html"><img src="__HOME__/images/p6.jpg" /></a></div>
+        <div class="products_list_img slide-left"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p6.jpg" /></a></div>
         <div class="products_list_title">
           <p>桶式铁氟龙换热器</p>
           <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
         </div>
       </div>
       <div class="products_list_box">
-        <div class="products_list_img slide-left"><a href="products_details.html"><img src="__HOME__/images/p7.jpg" /></a></div>
+        <div class="products_list_img slide-left"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p7.jpg" /></a></div>
         <div class="products_list_title">
           <p>铁氟龙换热器</p>
           <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
         </div>
       </div>
       <div class="products_list_box">
-        <div class="products_list_img slide-left"><a href="products_details.html"><img src="__HOME__/images/p8.jpg" /></a></div>
+        <div class="products_list_img slide-left"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p8.jpg" /></a></div>
         <div class="products_list_title">
           <p>自动流水线</p>
           <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
@@ -153,27 +153,27 @@ $(document).ready(function(){
       <div class="news_index_box">
         <div class="news_box_list slide-left">
           <div class="news_box_list2">
-            <p><a href="news_details.html">如何保养压铸机配件？</a></p>
-            <p>压铸机配件放置在干燥的地方，避免浸水破裂。压铸机配件之料勺的操做调养   ：料勺等工具应停止少时分浸泡正在开金液内，以减少开金液对工具的腐蚀... </p>
-            <p align="right">2016-05-29</p>
+            <p><a href="{:U('News/show',array('cid'=>$indexNews[0]['category_id'],'id'=>$indexNews[0]['id']))}">{$indexNews[0]['title']}</a></p>
+            <p>{$indexNews[0]['summary']}</p>
+            <p align="right">{$indexNews[0]['create_time']|date="Y-m-d",###}</p>
           </div>
-          <div class="news_box_list1"><a href="news_details.html"><img src="__HOME__/images/n1.jpg" /></a></div>
+          <div class="news_box_list1"><a href="{:U('News/show',array('cid'=>$indexNews[0]['category_id'],'id'=>$indexNews[0]['id']))}"><img src="{:echoImg($indexNews[0]['image'],'400','220','news')}" /></a></div>
         </div>
         <div class="news_box_list slide-top">
-          <div class="news_box_list1"><a href="news_details.html"><img src="__HOME__/images/n2.jpg" /></a></div>
+          <div class="news_box_list1"><a href="{:U('News/show',array('cid'=>$indexNews[1]['category_id'],'id'=>$indexNews[1]['id']))}"><img src="{:echoImg($indexNews[1]['image'],'400','220','news')}" /></a></div>
           <div class="news_box_list2">
-            <p><a href="news_details.html">如何保养压铸机配件？</a></p>
-            <p>压铸机配件放置在干燥的地方，避免浸水破裂。压铸机配件之料勺的操做调养   ：料勺等工具应停止少时分浸泡正在开金液内，以减少开金液对工具的腐蚀... </p>
-            <p align="right">2016-05-29</p>
+            <p><a href="{:U('News/show',array('cid'=>$indexNews[1]['category_id'],'id'=>$indexNews[1]['id']))}">{$indexNews[1]['title']}</a></p>
+            <p>{$indexNews[1]['summary']}</p>
+            <p align="right">{$indexNews[1]['create_time']|date="Y-m-d",###}</p>
           </div>
         </div>
         <div class="news_box_list slide-right">
           <div class="news_box_list2">
-            <p><a href="news_details.html">如何保养压铸机配件？</a></p>
-            <p>压铸机配件放置在干燥的地方，避免浸水破裂。压铸机配件之料勺的操做调养   ：料勺等工具应停止少时分浸泡正在开金液内，以减少开金液对工具的腐蚀... </p>
-            <p align="right">2016-05-29</p>
+            <p><a href="{:U('News/show',array('cid'=>$indexNews[2]['category_id'],'id'=>$indexNews[2]['id']))}">{$indexNews[2]['title']}</a></p>
+            <p>{$indexNews[2]['summary']}</p>
+            <p align="right">{$indexNews[2]['create_time']|date="Y-m-d",###}</p>
           </div>
-          <div class="news_box_list1"><a href="news_details.html"><img src="__HOME__/images/n3.jpg" /></a></div>
+          <div class="news_box_list1"><a href="{:U('News/show',array('cid'=>$indexNews[2]['category_id'],'id'=>$indexNews[2]['id']))}"><img src="{:echoImg($indexNews[2]['image'],'400','220','news')}" /></a></div>
         </div>
       </div>
     </div>
