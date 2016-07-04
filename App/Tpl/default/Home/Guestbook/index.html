@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <layout name="Home:Inc:script" cache="0" />
-<script type="text/javascript" src="__PUBLIC__/js/jquery-1.7.1.min.js"></script>
 <script>
 $(document).ready(function() { 
     $('.submit').click(function(){ 
@@ -21,11 +20,7 @@ $(document).ready(function() {
     			document.getElementById("linkman").focus();
     			return false;
     		}
-			if(document.getElementById('company_name').value==''){
-    			alert('请填写公司名称');
-    			document.getElementById("company_name").focus();
-    			return false;
-    		}
+			 
 			if(document.getElementById('address').value==''){
     			alert('请填写联系地址');
     			document.getElementById("address").focus();
@@ -71,104 +66,98 @@ function fleshVerify(type){
 }
 </script>
 </head>
-<body style="background:url(__HOME__/images/bg6.jpg) center top no-repeat;">
-<layout name="Home:Inc:header" cache="0" />
-<div id="banner_page_img"><img src="__HOME__/images/t6.png" width="1040" height="65" /></div>
-<div id="banner_page_add">
-  <div class="weibo">
-    <!-- JiaThis Button BEGIN -->
-    <div class="jiathis_style"> <a class="jiathis_button_qzone"></a> <a class="jiathis_button_tsina"></a> <a class="jiathis_button_tqq"></a> <a class="jiathis_button_renren"></a> <a class="jiathis_button_kaixin001"></a> <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a> <a class="jiathis_counter_style"></a> </div>
-    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1374890429635147" charset="utf-8"></script>
-    <!-- JiaThis Button END -->
-  </div>
-  您当前所在的位置：<a href="__APP__">首页</a> > <a href="__APP__/Guestbook">在线留言</a> > 填写留言</div>
-<div id="nav_line">
-  <ul>
-    <li><a href="__APP__/Guestbook"  class="cur">填写留言</a></li>
-	<li><a href="__APP__/Guestbook/show"  >查看留言</a></li>
-  </ul>
+<body>
+<layout name="Home:Inc:kefu" cache="0" />
+<div style="clear:both;"></div>
+<div style="background:url(__HOME__/images/header_bg.jpg);">
+  <layout name="Home:Inc:nav" cache="0" />
 </div>
-<div id="page_center">
-  <div class="page_right">
-    <div class="page_right_concent">
-      <div class="news_img"><img src="__HOME__/images/img06.jpg" /></div>
-      <div class="news_lists">
-        <table width="95%" height="442" border="0" align="center" cellpadding="0" cellspacing="0">
-          <form id="form1" name="form1" method="post" action="__APP__/Guestbook/guestbookSave">
-            <tr>
-              <td width="97" align="right"><p align="center">留言主题：</p></td>
-              <td width="557"><input name="title" type="text" id="title" size="40" maxlength="100" style="width:400px; height:20px; line-height:20px; border:1px solid #999999;" />
-                <font color="red">*</font></td>
-            </tr>
-            <tr>
-              <td align="right" valign="top"><p align="center">留言内容：</p></td>
-              <td><font color="red">
-                <textarea name="content" cols="40" rows="5" id="content" style="width:400px; height:100px; line-height:20px; border:1px solid #999999;"></textarea>
-                *</font></td>
-            </tr>
-            <tr>
-              <td align="right"><p align="center">您的称呼：</p></td>
-              <td><input name="linkman" type="text" id="linkman" value="" size="20" maxlength="50" style="width:400px; height:20px; line-height:20px; border:1px solid #999999;"/>
-                <font color="red">*</font></td>
-            </tr>
-            <tr>
-              <td align="right"><p align="center">您的性别：</p></td>
-              <td><input name="sex" type="radio" value="先生" class="inputnoborder" checked />
-                先生
-                <input type="radio" name="sex" value="女士" class="inputnoborder"  />
-                女士 <font color="red">*</font></td>
-            </tr>
-            <tr>
-              <td align="right"><p align="center">公司名称：</p></td>
-              <td><input id="company_name" name="company_name" type="text" value="" size="50" maxlength="100" style="width:400px; height:20px; line-height:20px; border:1px solid #999999;"/>
-                <font color="red">*</font></td>
-            </tr>
-            <tr>
-              <td align="right"><p align="center">联系地址：</p></td>
-              <td><input id="address" name="address" type="text" value="" size="50" maxlength="100" style="width:400px; height:20px; line-height:20px; border:1px solid #999999;"/>
-                <font color="red">*</font></td>
-            </tr>
-            <tr>
-              <td align="right"><p align="center">邮政编码：</p></td>
-              <td><input name="code" id="code" type="text" value="" size="20" maxlength="20" style="width:400px; height:20px; line-height:20px; border:1px solid #999999;"/></td>
-            </tr>
-            <tr>
-              <td align="right"><p align="center">联系电话：</p></td>
-              <td><input name="tel" type="text" id="tel" value="" size="20" maxlength="50" style="width:400px; height:20px; line-height:20px; border:1px solid #999999;"/>
-                <font color="red">*</font></td>
-            </tr>
-            <tr>
-              <td align="right"><p align="center">传真号码：</p></td>
-              <td><input name="fax" type="text" id="fax" value="" size="20" maxlength="50" style="width:400px; height:20px; line-height:20px; border:1px solid #999999;"/></td>
-            </tr>
-            <tr>
-              <td align="right"><p align="center">手机号码：</p></td>
-              <td><input name="mobile" type="text" id="mobile" value="" size="20" maxlength="50" style="width:400px; height:20px; line-height:20px; border:1px solid #999999;"/></td>
-            </tr>
-            <tr>
-              <td align="right"><p align="center">电子信箱：</p></td>
-              <td><input name="email" type="text" id="email" value="" size="30" maxlength="50" style="width:400px; height:20px; line-height:20px; border:1px solid #999999;"/>
-                <font color="red">*</font></td>
-            </tr>
-            <tr>
-              <td align="right"><p align="center">验 &nbsp;证 &nbsp;码：</p></td>
-              <td><input name="verify" id="verify" type="text" size="6" maxlength="6" style="width:50px; height:20px; line-height:20px; border:1px solid #999999;"/>
-                <a href="javascript:refreshimg()" title="看不清楚，换个图片。"><img id="verifyImg" src="__APP__/Index/verify" onClick="fleshVerify()" border="0" style="cursor:pointer" align="absmiddle"></a> <font color="red">*</font></td>
-            </tr>
-            <tr>
-              <td align="right">&nbsp;</td>
-              <td><p>&nbsp;</p>
-                <p><img src="__HOME__/images/tj.jpg" width="124" height="38" class="submit" style="cursor:pointer;"/></p></td>
-            </tr>
-          </form>
-        </table>
+<div style="clear:both;"></div>
+<div style="clear:both;"></div>
+<div style="clear:both;"></div>
+<div style="background:#FFFFFF;">
+  <layout name="Home:Inc:insideAdv" cache="0" />
+  <div style="clear:both;"></div>
+  <div style="background:#f5f5f5;">
+    <div id="page_center">
+      <div class="p_left">
+        <div class="p_left_title">
+          <p><span style=" color:#fff;">FEEDBACK</span></p>
+          <p style=" color:#fff;">在线留言</p>
+        </div>
+        <ul>
+          <li><a href="{:U('Guestbook/index')}">填写留言</a></li>
+          <<layout name="Home:Inc:leftNav" cache="0" />
+        </ul>
       </div>
-      <div style="clear:both;"></div>
+      <div class="page_right">
+        <div class="page_right_show">
+          <div class="page_right_show_add">您当前的位置：首页 &gt; <a href="{:U('Guestbook/index')}">在线留言</a> &gt; 填写留言</div>
+          <div class="page_right_show_details">
+            <p align="center" style=" font-size:26px; font-weight:bold;">&nbsp;</p>
+            <p align="center" style=" font-size:26px; font-weight:bold;"><strong>期待您的意见与建议</strong></p>
+            <p align="center" style=" font-size:20px; font-weight:bold;">&nbsp;</p>
+            <form id="form1" name="form1" method="post" action="__APP__/Guestbook/guestbookSave">
+            <table width="76%" height="582" border="0" align="center">
+              <tr>
+                <td colspan="2"><p align="left">&nbsp;</p></td>
+              </tr>
+              <tr>
+                <td width="52%"><p align="left">* <strong>您的姓名</strong></p></td>
+                <td width="48%">* <strong>您的电话</strong></td>
+              </tr>
+              <tr>
+                <td width="52%"><input name="linkman" type="text" id="linkman" style=" width:300px; height:33px; padding-left:5px; border:1px solid #c3c3c3; background:none;  color:#666; font-size:14px; line-height:22px;"   /></td>
+                <td width="48%"><input name="tel" type="text" id="tel" style=" width:300px; height:33px; padding-left:5px; border:1px solid #c3c3c3; background:none;  color:#666; font-size:14px; line-height:22px;"   /></td>
+              </tr>
+              <tr>
+                <td width="52%"><p align="left">&nbsp;&nbsp;<strong>您的地址</strong></p></td>
+                <td width="48%">&nbsp;<strong>&nbsp;您的邮箱</strong></td>
+              </tr>
+              <tr>
+                <td width="52%"><input name="address" type="text" id="address" style=" width:300px; height:33px; padding-left:5px; border:1px solid #c3c3c3; background:none;  color:#666; font-size:14px; line-height:22px;"   /></td>
+                <td width="48%"><input name="email" type="text" id="email" style=" width:300px; height:33px; padding-left:5px; border:1px solid #c3c3c3; background:none;  color:#666; font-size:14px; line-height:22px;"/></td>
+              </tr>
+               
+              <tr>
+                <td width="52%"><p align="left">*<strong> 留言标题</strong></p></td>
+                <td width="48%">&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan="2"><input name="title" type="text" id="title" style=" width:660px; height:33px; padding-left:5px; border:1px solid #c3c3c3; background:none;  color:#666; font-size:14px; line-height:22px;" /></td>
+              </tr>
+              <tr>
+                <td colspan="2"><p align="left">*&nbsp;<strong>留言内容</strong></p></td>
+              </tr>
+              <tr>
+                <td colspan="2"><textarea name="content" rows="10" id="content" style=" width:660px; height:150px; padding-left:5px; border:1px solid #c3c3c3; background:none;  color:#666; font-size:14px; line-height:22px;" ></textarea></td>
+              </tr>
+              <tr>
+                <td colspan="2"><p align="left">* <strong>验证码</strong></p></td>
+              </tr>
+              <tr>
+                <td colspan="2"><p align="left">
+                    <input name="verify" type="text" id="verify" style=" width:200px; height:33px; padding-left:5px; border:1px solid #c3c3c3; background:none;  color:#666; font-size:14px; line-height:22px;"   />
+                    <img id="verifyImg" src="__APP__/Index/verify" onClick="fleshVerify()" width="74" height="23" /> </p></td>
+              </tr>
+              <tr>
+                <td colspan="2"><div align="center" style="height:50px; padding-top:15px;">
+                    <p>&nbsp;</p>
+                    <p><a href="javascript:void(0)" class="submit"><img src="__HOME__/images/bottom_tj.jpg" alt="提交留言" width="124" height="38" border="0" style="margin-right:15px;" /></a><a href="#"><img src="__HOME__/images/bottom_tx.jpg" alt="重新填写" width="124" height="38" border="0" /></a></p>
+                  </div></td>
+              </tr>
+            </table>
+            </form>
+            <p align="center" style=" font-size:20px; font-weight:bold;">&nbsp;</p>
+          </div>
+        </div>
+      </div>
       <div style="clear:both;"></div>
     </div>
   </div>
+  <layout name="Home:Inc:link" cache="0" />
   <div style="clear:both;"></div>
+  <layout name="Home:Inc:footer" cache="0" />
 </div>
-<layout name="Home:Inc:footer" cache="0" />
 </body>
 </html>
