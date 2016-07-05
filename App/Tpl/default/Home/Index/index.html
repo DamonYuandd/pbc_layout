@@ -88,56 +88,58 @@ $(document).ready(function(){
         <div class="products_list_img slide-right"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p1.jpg" /></a></div>
         <div class="products_list_title">
           <p>推车系列</p>
-          <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
+          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
         </div>
       </div>
       <div class="products_list_box">
         <div class="products_list_img slide-right"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p2.jpg" /></a></div>
         <div class="products_list_title">
-          <p>推车系列</p>
-          <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
+          <p>板式换热器</p>
+          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
         </div>
       </div>
+      
       <div class="products_list_box">
         <div class="products_list_img slide-right"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p3.jpg" /></a></div>
         <div class="products_list_title">
           <p>板式换热器</p>
-          <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
+          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
         </div>
       </div>
+      
       <div class="products_list_box">
         <div class="products_list_img slide-right"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p4.jpg" /></a></div>
         <div class="products_list_title">
           <p>PP上滚轮</p>
-          <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
+          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
         </div>
       </div>
       <div class="products_list_box">
         <div class="products_list_img slide-left"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p5.jpg" /></a></div>
         <div class="products_list_title">
           <p>探温针</p>
-          <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
+          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
         </div>
       </div>
       <div class="products_list_box">
         <div class="products_list_img slide-left"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p6.jpg" /></a></div>
         <div class="products_list_title">
           <p>桶式铁氟龙换热器</p>
-          <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
+          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
         </div>
       </div>
       <div class="products_list_box">
         <div class="products_list_img slide-left"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p7.jpg" /></a></div>
         <div class="products_list_title">
           <p>铁氟龙换热器</p>
-          <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
+          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
         </div>
       </div>
       <div class="products_list_box">
         <div class="products_list_img slide-left"><a href="{:U('Goods/index')}"><img src="__HOME__/images/p8.jpg" /></a></div>
         <div class="products_list_title">
           <p>自动流水线</p>
-          <p><a href="products_details.html"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
+          <p><a href="{:U('Goods/index')}"><img src="__HOME__/images/more.jpg" width="97" height="21" /></a></p>
         </div>
       </div>
       <div style="clear:both;"></div>
@@ -154,7 +156,7 @@ $(document).ready(function(){
         <div class="news_box_list slide-left">
           <div class="news_box_list2">
             <p><a href="{:U('News/show',array('cid'=>$indexNews[0]['category_id'],'id'=>$indexNews[0]['id']))}">{$indexNews[0]['title']}</a></p>
-            <p>{$indexNews[0]['summary']}</p>
+            <p>{$indexNews[0]['summary']|str_cut=0,100}</p>
             <p align="right">{$indexNews[0]['create_time']|date="Y-m-d",###}</p>
           </div>
           <div class="news_box_list1"><a href="{:U('News/show',array('cid'=>$indexNews[0]['category_id'],'id'=>$indexNews[0]['id']))}"><img src="{:echoImg($indexNews[0]['image'],'400','220','news')}" /></a></div>
@@ -163,14 +165,14 @@ $(document).ready(function(){
           <div class="news_box_list1"><a href="{:U('News/show',array('cid'=>$indexNews[1]['category_id'],'id'=>$indexNews[1]['id']))}"><img src="{:echoImg($indexNews[1]['image'],'400','220','news')}" /></a></div>
           <div class="news_box_list2">
             <p><a href="{:U('News/show',array('cid'=>$indexNews[1]['category_id'],'id'=>$indexNews[1]['id']))}">{$indexNews[1]['title']}</a></p>
-            <p>{$indexNews[1]['summary']}</p>
+            <p>{$indexNews[1]['summary']|str_cut=0,100}</p>
             <p align="right">{$indexNews[1]['create_time']|date="Y-m-d",###}</p>
           </div>
         </div>
         <div class="news_box_list slide-right">
           <div class="news_box_list2">
             <p><a href="{:U('News/show',array('cid'=>$indexNews[2]['category_id'],'id'=>$indexNews[2]['id']))}">{$indexNews[2]['title']}</a></p>
-            <p>{$indexNews[2]['summary']}</p>
+            <p>{$indexNews[2]['summary']|str_cut=0,100}</p>
             <p align="right">{$indexNews[2]['create_time']|date="Y-m-d",###}</p>
           </div>
           <div class="news_box_list1"><a href="{:U('News/show',array('cid'=>$indexNews[2]['category_id'],'id'=>$indexNews[2]['id']))}"><img src="{:echoImg($indexNews[2]['image'],'400','220','news')}" /></a></div>
